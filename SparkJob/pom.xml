@@ -16,7 +16,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <scala.version>2.11.12</scala.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hadoop.version>3.1.2</hadoop.version>
+        <hadoop.version>2.7.5</hadoop.version>
         <spark.version>2.3.3</spark.version>
     </properties>
 
@@ -106,14 +106,19 @@
             <version>2.5.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--            <version>2.9.10</version>-->
 
-<!--        </dependency>-->
     </dependencies>
 
+<!--for jobs-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.18.Final</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <sourceDirectory>src/main/scala</sourceDirectory>
